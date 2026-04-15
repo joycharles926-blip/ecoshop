@@ -12,6 +12,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 function App() {
   return (
     <GoogleOAuthProvider clientId="882400013905-6im67kk4qulsrmhdqiecjih7oqhp4taf.apps.googleusercontent.com">
+
       <BrowserRouter>
         <div className="App">
 
