@@ -45,6 +45,7 @@ function Signup() {
             "Sign Up"
           )}
         </button>
+        <p>Forgot your password? <Link to="/reset-password">Reset it here</Link></p>
       </form>
       <SocialLogin />
       <p>Already have an account? <Link to="/login">Sign in</Link></p>

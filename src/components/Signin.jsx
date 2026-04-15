@@ -34,6 +34,7 @@ import { Link } from "react-router-dom";
             "Sign In"
           )}
         </button>
+        <p>Forgot your password? <Link to="/reset-password">Reset it here</Link></p>
       </form>
 
       {/* SOCIAL LOGIN HERE */}

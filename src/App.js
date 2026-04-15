@@ -8,6 +8,7 @@ import AddProduct from './AddProduct';
 import GetProducts from './components/Getproduct';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import ResetPassword from './components/ResetPassword';
 
 function App() {
   return (
@@ -26,8 +27,8 @@ function App() {
             <Route path="/signin" element={<Signin />} />
             <Route path="/add-product" element={<AddProduct />} />
             <Route path="/get-product" element={<GetProducts />} />
+            <Route path="/reset-password" element={<ResetPassword />} />
           </Routes>
-
         </div>
       </BrowserRouter>
 
