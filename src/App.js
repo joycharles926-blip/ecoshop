@@ -8,7 +8,8 @@ import AddProduct from './AddProduct';
 import GetProducts from './components/Getproduct';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import ResetPassword from './components/ResetPassword';
+import MakePayment from './components/MakePayment';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
@@ -18,17 +19,18 @@ function App() {
         <div className="App">
 
           {/* Optional header */}
-          <h1 style={{ textAlign: "center", margin: "20px 0" }}>
+          <h1 style={{ textAlign: "center", margin: "20px 0" }} className="text-primary font-weight-bold mb-4">
             Welcome to EcoShop
           </h1>
-
           <Routes>
             <Route path="/signup" element={<Signup />} />
             <Route path="/signin" element={<Signin />} />
             <Route path="/add-product" element={<AddProduct />} />
-            <Route path="/get-product" element={<GetProducts />} />
-            <Route path="/reset-password" element={<ResetPassword />} />
+            <Route path="/" element={<GetProducts />} />
+            <Route path="/make-payment" element={<MakePayment />} />
           </Routes>
+          <Navbar/>
+
         </div>
       </BrowserRouter>
 

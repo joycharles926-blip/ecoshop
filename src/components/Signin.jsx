@@ -16,17 +16,23 @@ import { Link } from "react-router-dom";
       method: "POST",
       body: formData
     });
+    // Clearing the form after successful login
+    e.target.reset();
+    alert("Signin successful!");
+
 
     setLoading(false);
   };
 
   return (
     <div className="form-container">
-      <h2>Sign In</h2>
+      <h2 className="text-primary ">Sign In</h2>
 
       <form onSubmit={handleLogin}>
         <input name="email" placeholder="Enter your email" />
+        <br /><br />
         <input name="password" type="password" placeholder="Enter your password" />
+        <br /><br />
          <button className="btn btn-primary w-100">
           {loading ? (
             <i className="bi bi-arrow-repeat spin-icon"></i>
@@ -34,7 +40,7 @@ import { Link } from "react-router-dom";
             "Sign In"
           )}
         </button>
-        <p>Forgot your password? <Link to="/reset-password">Reset it here</Link></p>
+        <br /><br />
       </form>
 
       {/* SOCIAL LOGIN HERE */}

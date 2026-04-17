@@ -38,20 +38,7 @@ export default function AddProduct() {
         <input
           type="text"
           name="item_name"
-          placeholder="Product Name"
-          required
-        />
-
-        <textarea
-          name="item_description"
-          placeholder="Description"
-          required
-        />
-
-        <input
-          type="number"
-          name="item_cost"
-          placeholder="Price"
+          placeholder="ItemName"
           required
         />
 
@@ -59,6 +46,19 @@ export default function AddProduct() {
           type="file"
           name="item_photo"
           accept="image/*"
+          required
+        />
+
+        <textarea
+          name="item_description"
+          placeholder="Item Description"
+          required
+        />
+
+        <input
+          type="number"
+          name="item_cost"
+          placeholder="Item Cost"
           required
         />
 
