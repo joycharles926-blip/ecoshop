@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
  function Signin() {
   const [loading, setLoading] = useState(false);
 
-  const handleLogin = async (e) => {
+  const handleSignin = async (e) => {
     e.preventDefault();
     setLoading(true);
 
@@ -28,7 +28,7 @@ import { Link } from "react-router-dom";
     <div className="form-container">
       <h2 className="text-primary ">Sign In</h2>
 
-      <form onSubmit={handleLogin}>
+      <form onSubmit={handleSignin}>
         <input name="email" placeholder="Enter your email" />
         <br /><br />
         <input name="password" type="password" placeholder="Enter your password" />
