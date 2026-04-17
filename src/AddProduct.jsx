@@ -38,7 +38,7 @@ export default function AddProduct() {
         <input
           type="text"
           name="item_name"
-          placeholder="ItemName"
+          placeholder="Item Name"
           required
         />
 

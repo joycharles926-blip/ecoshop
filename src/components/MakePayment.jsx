@@ -35,7 +35,7 @@ export default function MakePayment() {
       <form onSubmit={handlePayment}>
         
         <input
-          type="text"
+          type="number"
           name="phone"
           placeholder="Phone (e.g. 2547XXXXXXXX)"
           required
