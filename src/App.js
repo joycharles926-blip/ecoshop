@@ -13,7 +13,7 @@ import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <GoogleOAuthProvider clientId="882400013905-6im67kk4qulsrmhdqiecjih7oqhp4taf.apps.googleusercontent.com">
+    <GoogleOAuthProvider clientId="882400013905-naa0hhja6amsira7id2l2do42qn17vm2.apps.googleusercontent.com">
 
       <BrowserRouter>
         <div className="App">
