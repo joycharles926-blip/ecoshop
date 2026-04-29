@@ -22,6 +22,7 @@ function App() {
           <h1 style={{ textAlign: "center", margin: "20px 0" }} className="text-primary font-weight-bold mb-4">
             Welcome to EcoShop
           </h1>
+          <Navbar/>
           <Routes>
             <Route path="/signup" element={<Signup />} />
             <Route path="/signin" element={<Signin />} />
@@ -29,7 +30,7 @@ function App() {
             <Route path="/" element={<GetProducts />} />
             <Route path="/make-payment" element={<MakePayment />} />
           </Routes>
-          <Navbar/>
+          
 
         </div>
       </BrowserRouter>
