@@ -31,7 +31,7 @@ export default function AddProduct() {
 
   return (
     <div className="form-container">
-      <h2>Add Product</h2>
+      <h2 className="text-success">Add Product</h2>
 
       <form onSubmit={handleAddProduct} encType="multipart/form-data">
         
@@ -41,27 +41,31 @@ export default function AddProduct() {
           placeholder="Item Name"
           required
         />
-
-        <input
-          type="file"
-          name="item_photo"
-          accept="image/*"
-          required
-        />
-
-        <textarea
+        <br />
+        <br />
+        <textarea className="w-100 h-150"
           name="item_description"
           placeholder="Item Description"
           required
         />
-
+        <br />
+        <br />
         <input
           type="number"
           name="item_cost"
           placeholder="Item Cost"
           required
         />
-
+        <br />
+        <br />
+        <input
+          type="file"
+          name="item_photo"
+          accept="image/*"
+          required
+        />
+        <br />
+        <br />
          <button className="btn btn-primary w-100">
           {loading ? (
             <i className="bi bi-arrow-repeat spin-icon"></i>
