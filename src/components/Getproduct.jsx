@@ -64,7 +64,7 @@ function GetProduct() {
             {/* BUTTONS */}
             <div style={{ marginTop: "10px" }}>
               <button onClick={() => handleClick(item)}>
-                💳 Buy Now
+                💳 Add to Cart
               </button>
 
               <button
