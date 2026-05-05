@@ -30,12 +30,12 @@ export default function MakePayment() {
   // ✅ UI
   return (
     <div className="form-container">
-      <h2>Make Payment</h2>
+      <h2 className="text-primary">Make Payment</h2>
 
       <form onSubmit={handlePayment}>
         
         <input
-          type="number"
+          type="text"
           name="phone"
           placeholder="Phone (e.g. 2547XXXXXXXX)"
           required

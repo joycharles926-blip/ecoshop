@@ -46,18 +46,6 @@ export default function SocialLogin() {
         )}
       </div>
 
-      {/* FACEBOOK (UI ONLY FOR NOW) */}
-      <button className="btn btn-primary w-100 mt-3 social-button">
-        <i className="bi bi-facebook"></i>
-        Continue with Facebook
-      </button>
-
-      {/* GITHUB (OPTIONAL EXTRA STYLE) */}
-      <button className="btn btn-dark w-100 mt-2 social-button">
-        <i className="bi bi-github"></i>
-        Continue with GitHub
-      </button>
-
     </div>
   );
 }

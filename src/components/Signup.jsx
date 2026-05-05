@@ -12,8 +12,9 @@ function Signup() {
     const formData = new FormData(e.target);
 
     try {
-      await fetch("http://127.0.0.1:5000/api/signup", {
+      await fetch("https://joychatu.alwaysdata.net/api/signup", {
         method: "POST",
+        headers: {Authorization: "12345ADMIN"},
         body: formData
       });
       // Clearing the form after successful signup
@@ -28,7 +29,7 @@ function Signup() {
 
   return (
     <div className="form-container">
-      <h2 className="text-primary">Create Account</h2>
+      <h2 className="text-primary">Sign Up</h2>
       <br />
       <form onSubmit={handleSignup}>
         <input name="username" placeholder="Enter your username" required className="" />
@@ -50,7 +51,7 @@ function Signup() {
       </form>
       <br />
       <SocialLogin />
-      <p>Already have an account? <Link to="/login">Sign in</Link></p>
+      <p>Already have an account? <Link to="/signin">Sign in</Link></p>
     </div>
   );
 }

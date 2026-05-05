@@ -6,13 +6,13 @@ import { Link } from "react-router-dom";
  function Signin() {
   const [loading, setLoading] = useState(false);
 
-  const handleSignin = async (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     setLoading(true);
 
     const formData = new FormData(e.target);
 
-    await fetch("http://127.0.0.1:5000/api/signin", {
+    await fetch("https://joychatu.alwaysdata.net/api/signin", {
       method: "POST",
       body: formData
     });
@@ -26,9 +26,9 @@ import { Link } from "react-router-dom";
 
   return (
     <div className="form-container">
-      <h2 className="text-primary ">Sign In</h2>
+      <h2 className="text-primary">Sign In</h2>
 
-      <form onSubmit={handleSignin}>
+      <form onSubmit={handleLogin}>
         <input name="email" placeholder="Enter your email" />
         <br /><br />
         <input name="password" type="password" placeholder="Enter your password" />
