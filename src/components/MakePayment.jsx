@@ -30,7 +30,7 @@ export default function MakePayment() {
   // ✅ UI
   return (
     <div className="form-container">
-      <h2 className="text-primary">Make Payment</h2>
+      <h2 className="text-success">Make Payment</h2>
 
       <form onSubmit={handlePayment}>
         
@@ -48,7 +48,7 @@ export default function MakePayment() {
           required
         />
 
-        <button type="submit" className="btn btn-primary w-100">
+        <button type="submit" className="btn btn-success w-100">
           Pay Now
         </button>
       </form>

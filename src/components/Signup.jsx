@@ -12,7 +12,7 @@ function Signup() {
     const formData = new FormData(e.target);
 
     try {
-      await fetch("https://joychatu.alwaysdata.net/api/signup", {
+      await fetch("http://joychatu.alwaysdata.net/api/add_product", {
         method: "POST",
         headers: {Authorization: "12345ADMIN"},
         body: formData
@@ -29,7 +29,7 @@ function Signup() {
 
   return (
     <div className="form-container">
-      <h2 className="text-primary">Sign Up</h2>
+      <h2 className="text-success">Sign Up</h2>
       <br />
       <form onSubmit={handleSignup}>
         <input name="username" placeholder="Enter your username" required className="" />
@@ -40,7 +40,7 @@ function Signup() {
         <br /><br />
         <input name="phone" placeholder="Enter your phone number" required />
         <br /><br />
-        <button type="submit" className="btn btn-primary w-100">
+        <button type="submit" className="btn btn-success w-100">
           {loading ? (
             <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
           ) : (

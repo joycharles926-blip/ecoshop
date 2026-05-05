@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
     const formData = new FormData(e.target);
 
-    await fetch("https://joychatu.alwaysdata.net/api/signin", {
+    await fetch("http://joychatu.alwaysdata.net/api/add_product", {
       method: "POST",
       body: formData
     });
@@ -26,14 +26,14 @@ import { Link } from "react-router-dom";
 
   return (
     <div className="form-container">
-      <h2 className="text-primary">Sign In</h2>
+      <h2 className="text-success">Sign In</h2>
 
       <form onSubmit={handleLogin}>
         <input name="email" placeholder="Enter your email" />
         <br /><br />
         <input name="password" type="password" placeholder="Enter your password" />
         <br /><br />
-         <button className="btn btn-primary w-100">
+         <button className="btn btn-success w-100">
           {loading ? (
             <i className="bi bi-arrow-repeat spin-icon"></i>
           ) : (

@@ -4,14 +4,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import Signup from './components/Signup';
 import Signin from './components/Signin';
-import AddProduct from './AddProduct';
 import GetProducts from './components/Getproduct';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MakePayment from './components/MakePayment';
-import { Nav } from 'react-bootstrap';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Carousel from './components/Carousel';
+import AddProduct from './components/Addproduct';
 
 function App() {
   return (
@@ -26,6 +25,7 @@ function App() {
           </h1>
           <Navbar/>
           <Carousel/>
+          <AddProduct/>
           <Routes>
             <Route path="/signup" element={<Signup />} />
             <Route path="/signin" element={<Signin />} />

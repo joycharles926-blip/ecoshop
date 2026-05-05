@@ -7,7 +7,7 @@ function GetProduct() {
 
   // Fetch products from Flask API
   useEffect(() => {
-    fetch("https://joychatu.alwaysdata.net/api/products")
+    fetch("http://joychatu.alwaysdata.net/api/add_product")
       .then((res) => res.json())
       .then((data) => setItems(data))
       .catch((err) => console.log(err));
@@ -36,7 +36,7 @@ function GetProduct() {
 
   return (
     <div className="product-container">
-      <h2 className="text-center text-primary">Available Products</h2>
+      <h2 className="text-center text-success">Available Products</h2>
 
       <div className="product-grid">
         {items.map((item, index) => (
@@ -45,12 +45,9 @@ function GetProduct() {
             className="product-card"
             style={{ cursor: "pointer" }}
           >
-            <h3 className="text-warning">{item.name}</h3>
+            <h3 className="text-danger">{item.name}</h3>
 
             <p>{item.description}</p>
-
-            {/* FIXED PRICE DISPLAY */}
-            <p className="text-danger">KSh {item.price}</p>
 
             {/* If photo is a URL */}
             {item.photo && (
@@ -60,6 +57,9 @@ function GetProduct() {
                 style={{ width: "100px", height: "100px" }}
               />
             )}
+
+            {/* FIXED PRICE DISPLAY */}
+            <p className="text-danger">KSh {item.price}</p>
 
             {/* BUTTONS */}
             <div style={{ marginTop: "10px" }}>

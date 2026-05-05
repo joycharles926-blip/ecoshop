@@ -37,7 +37,7 @@ export default function AddProduct() {
 
     try {
       const res = await fetch(
-        "https://joychatu.alwaysdata.net/api/add_product",
+        "http://joychatu.alwaysdata.net/api/add_product",
         {
           method: "POST",
           headers: {
@@ -70,7 +70,7 @@ export default function AddProduct() {
 
   return (
     <div className="form-container">
-      <h2 className="text-success">Admin Add Product</h2>
+      <h2 className="text-success">Add Product</h2>
 
       <form onSubmit={handleSubmit} encType="multipart/form-data">
 
