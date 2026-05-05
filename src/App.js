@@ -25,7 +25,6 @@ function App() {
           </h1>
           <Navbar/>
           <Carousel/>
-          <AddProduct/>
           <Routes>
             <Route path="/signup" element={<Signup />} />
             <Route path="/signin" element={<Signin />} />
