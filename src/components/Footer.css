@@ -1,5 +1,5 @@
 .premium-footer {
-    background: linear-gradient(135deg,#ff6b6b,#ffa502);
+    background: green;
     color: white;
     margin-top: 70px;
     font-family: Arial, Helvetica, sans-serif;
@@ -40,7 +40,7 @@
     resize: none;
     height: 100px;
 }.footer-form button {
-    background: #ff6b6b;
+    background:#ff4757;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -57,18 +57,22 @@
     flex-wrap: wrap;
 }
 .social-icons a {
-    color: white;
-    font-size: 20px;
-    transition: 0.3s ease;
-    padding: 10px 14px;
-    box-sizing: 30px;
-    background-image: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 20px;   /* icon size */
+  transition: 0.3s ease;
+  padding: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .social-icons a:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    color: #ff6b6b;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ff6b6b;
 }
+
 .footer-bottom {
     text-align: center;
     padding: 20px;

@@ -1,57 +1,72 @@
-// components/MakePayment.jsx
-import { useState } from "react";
+import axios from 'axios'
+import React, { useState } from 'react'
+import { useLocation } from 'react-router-dom'
 
-export default function MakePayment() {
+const Makepayment = () => {
+  const [phone, setPhone] = useState("")
+  const [message, setMessage] = useState("")
+  const [error, setError] = useState("")
+  const { product } = useLocation().state || {}
+  const img_url = "http://joychatu.alwaysdata.net/static/images/"
 
-  // ✅ state
-  const [loading, setLoading] = useState(false);
+  const submit = async (e) => {
+    e.preventDefault()
+    setMessage("Please wait as we process")
 
-  // ✅ handle payment
-  const handlePayment = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-
-    const phone = e.target.phone.value;
-    const amount = e.target.amount.value;
+    const data = new FormData()
+    data.append("phone", phone)
+    data.append("amount", product.product_cost)
 
     try {
-      // 🔥 simulate API call (replace with real M-Pesa later)
-      await new Promise(resolve => setTimeout(resolve, 2000));
-
-      console.log("Payment made:", { phone, amount });
-
+      await axios.post("http://joychatu.alwaysdata.net/api/mpesa_payment", data)
+      setMessage("Please complete payment on your phone")
     } catch (error) {
-      console.error("Payment error:", error);
+      setError(error.message)
     }
+  }
 
-    setLoading(false);
-  };
-
-  // ✅ UI
   return (
-    <div className="form-container">
-      <h2 className="text-success">Make Payment</h2>
+    <div className="container mt-4">
+      <h1 className='text-success font-weight-bold mb-4 text-center'>Lipa na Mpesa</h1>
 
-      <form onSubmit={handlePayment}>
-        
-        <input
-          type="text"
-          name="phone"
-          placeholder="Phone (e.g. 2547XXXXXXXX)"
-          required
+      {/* ✅ Everything inside one card */}
+      <div className="card shadow" style={{ maxWidth: "500px", margin: "0 auto" }}>
+        <img
+          src={img_url + product.product_photo}
+          alt={product.product_name}
+          className="card-img-top"
+          style={{ height: "300px", objectFit: "cover" }}
         />
+        <div className="card-body">
+          <h5 className="card-title text-danger">{product.product_name}</h5>
+          <p className="card-text text-dark">{product.product_description}</p>
+          <p className="card-text text-warning font-weight-bold">
+            Cost: ${product.product_cost}
+          </p>
 
-        <input
-          type="number"
-          name="amount"
-          placeholder="Amount (KES)"
-          required
-        />
+          {/* ✅ Payment form inside card */}
+          <form onSubmit={submit}>
+            {message && <p className="text-info">{message}</p>}
+            {error && <p className="text-danger">{error}</p>}
 
-        <button type="submit" className="btn btn-success w-100">
-          Pay Now
-        </button>
-      </form>
+            <input
+              type="tel"
+              placeholder="Enter phone +254xxxx"
+              className="form-control mb-3"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              required
+            />
+
+            <button type="submit" className="btn btn-success w-100">
+              Make Payment
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
-  );
+  )
 }
+
+export default Makepayment
+

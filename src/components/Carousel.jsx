@@ -12,10 +12,10 @@ const Carousel = () => {
             <div id='mycarousel' className='carousel slide' data-bs-ride="carousel">
               <div className='carousel-inner'>
                 <div className='carousel-item active'>
-                  <img src={slide1} alt='' className='carousel-img w-100% h-300px' />
+                  <img src={slide1} alt='' className='carousel-img w-100% h-100' />
                 </div>
                 <div>
-                  <img src={slide2} alt='' className='carousel-img w-100% h-300px' />
+                  <img src={slide2} alt='' className='carousel-img w-100% h-100' />
                 </div>
                 <div className='carousel-item'></div>
                 <div className='carousel-item'></div>

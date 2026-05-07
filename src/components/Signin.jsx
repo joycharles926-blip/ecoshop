@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
     const formData = new FormData(e.target);
 
-    await fetch("http://joychatu.alwaysdata.net/api/add_product", {
+    await fetch("https://joychatu.alwaysdata.net/api/signin", {
       method: "POST",
       body: formData
     });
@@ -42,9 +42,6 @@ import { Link } from "react-router-dom";
         </button>
         <br /><br />
       </form>
-
-      {/* SOCIAL LOGIN HERE */}
-      <SocialLogin />
       <p>Don't have an account? <Link to="/signup">Sign up</Link></p>
     </div>
   );

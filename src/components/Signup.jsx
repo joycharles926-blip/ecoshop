@@ -12,7 +12,7 @@ function Signup() {
     const formData = new FormData(e.target);
 
     try {
-      await fetch("http://joychatu.alwaysdata.net/api/add_product", {
+      await fetch("https://joychatu.alwaysdata.net/api/signup", {
         method: "POST",
         headers: {Authorization: "12345ADMIN"},
         body: formData
@@ -50,7 +50,6 @@ function Signup() {
         
       </form>
       <br />
-      <SocialLogin />
       <p>Already have an account? <Link to="/signin">Sign in</Link></p>
     </div>
   );
