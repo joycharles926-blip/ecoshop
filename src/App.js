@@ -12,11 +12,12 @@ import AddProduct from './components/Addproduct';
 import GetProducts from './components/Getproduct';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MakePayment from './components/MakePayment';
-import { Nav } from 'react-bootstrap';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Carousel from './components/Carousel';
 import { useState } from 'react';
+import Chatbot from './components/Chatbot';
+import Checkout from './components/Ckeckout';
 function App() {
   const [cart, setCart] = useState([]);
 
@@ -32,6 +33,8 @@ function App() {
           <Navbar cart={cart} />
 
           <Carousel/>
+          <Chatbot/>
+          <Checkout/>
           <Routes>
             <Route path="/signup" element={<Signup />} />
             <Route path="/signin" element={<Signin />} />

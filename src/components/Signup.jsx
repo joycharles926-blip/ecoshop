@@ -1,10 +1,11 @@
 // components/Signup.jsx
 import { useState } from "react";
-import SocialLogin from "./SocialLogin";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 function Signup() {
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleSignup = async (e) => {
     e.preventDefault();
@@ -20,6 +21,22 @@ function Signup() {
       // Clearing the form after successful signup
       e.target.reset();
       alert("Signup successful!");
+
+      // ✅ Redirect based on previous action
+      const state = location.state;
+      if (state && state.action) {
+        if (state.action === "purchase-now" && state.product) {
+          navigate("/make-payment", { state: { product: state.product } });
+        } else if (state.action === "add-to-cart" && state.product) {
+          // Ideally, you also update cart here if needed
+          navigate("/cart");
+        } else {
+          navigate("/"); // fallback to homepage
+        }
+      } else {
+        navigate("/"); // fallback to homepage
+      }
+
     } catch (err) {
       console.error(err);
     }

@@ -64,6 +64,17 @@ button {
   cursor: pointer;
 }
 
+/* Social */
+.social-container {
+  margin-top: 20px;
+}
+
+.google-btn {
+  background: #db4437;
+  color: white;
+  margin-top: 10px;
+}
+
 .App-link {
   color: #61dafb;
 }

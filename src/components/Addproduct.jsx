@@ -30,7 +30,7 @@ export default function AddProduct() {
         "https://joychatu.alwaysdata.net/api/add_product",
         {
           method: "POST",
-          body: formData,
+          body: formData, // ✅ no Authorization header
         }
       );
 

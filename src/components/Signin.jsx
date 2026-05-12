@@ -1,6 +1,5 @@
 // Signin component
 import { useState } from "react";
-import SocialLogin from "../components/SocialLogin";
 import { Link } from "react-router-dom";
 
  function Signin() {
@@ -42,6 +41,7 @@ import { Link } from "react-router-dom";
         </button>
         <br /><br />
       </form>
+
       <p>Don't have an account? <Link to="/signup">Sign up</Link></p>
     </div>
   );

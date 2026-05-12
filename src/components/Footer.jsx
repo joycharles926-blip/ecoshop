@@ -49,11 +49,11 @@ function Footer() {
         <div className='footer-box'>
           <h2>Stay Connected</h2>
           <div className='social-icons'>
-            <a href="#"><i className="fab fa-facebook-f"></i></a>
-            <a href="#"><i className="fab fa-twitter"></i></a>
-            <a href="#"><i className="fab fa-instagram"></i></a>
-            <a href="#"><i className="fab fa-x-twitter"></i></a>
-            <a href="#"><i className="fab fa-whatsapp"></i></a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-x-twitter"></i></a>
+            <a href="https://www.whatsapp.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-whatsapp"></i></a>
           </div>
           <p>Follow us on social media for the latest updates and offers.</p>
         </div>
